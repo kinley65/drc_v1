@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="330" height="386" viewBox="0 0 504 486">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #dcedef;
+        stroke: #707070;
+      }
+
+      .cls-2 {
+        stroke: none;
+      }
+
+      .cls-3 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="Ellipse_35" data-name="Ellipse 35" class="cls-1">
+    <ellipse class="cls-2" cx="252" cy="243" rx="252" ry="243"/>
+    <ellipse class="cls-3" cx="252" cy="243" rx="251.5" ry="242.5"/>
+  </g>
+</svg>

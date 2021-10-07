@@ -1,0 +1,60 @@
+<svg id="stats" xmlns="http://www.w3.org/2000/svg" width="34.6" height="58.001" viewBox="0 0 64.6 58.001">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffdb0c;
+      }
+
+      .cls-2 {
+        fill: #ffa900;
+      }
+
+      .cls-3 {
+        fill: #de0418;
+      }
+
+      .cls-4 {
+        fill: #ff6536;
+      }
+
+      .cls-5 {
+        fill: gray;
+      }
+
+      .cls-6 {
+        fill: #666;
+      }
+
+      .cls-7 {
+        fill: #333;
+      }
+
+      .cls-8 {
+        fill: #e6e6e6;
+      }
+
+      .cls-9 {
+        fill: #b3b3b3;
+      }
+
+      .cls-10 {
+        fill: #4d4d4d;
+      }
+    </style>
+  </defs>
+  <rect id="Rectangle_88" data-name="Rectangle 88" class="cls-1" width="10.318" height="13.666" transform="translate(5.554 42.443)"/>
+  <rect id="Rectangle_89" data-name="Rectangle 89" class="cls-2" width="10.318" height="28.191" transform="translate(19.945 27.918)"/>
+  <rect id="Rectangle_90" data-name="Rectangle 90" class="cls-3" width="10.318" height="38.246" transform="translate(48.727 17.862)"/>
+  <rect id="Rectangle_91" data-name="Rectangle 91" class="cls-4" width="10.318" height="22.003" transform="translate(34.336 34.107)"/>
+  <rect id="Rectangle_92" data-name="Rectangle 92" class="cls-5" width="64.6" height="3.785" transform="translate(0 54.216)"/>
+  <rect id="Rectangle_93" data-name="Rectangle 93" class="cls-6" width="32.3" height="3.785" transform="translate(32.3 54.216)"/>
+  <g id="Group_111" data-name="Group 111" transform="translate(9.369 3.792)">
+    <rect id="Rectangle_94" data-name="Rectangle 94" class="cls-7" width="3.785" height="20.447" transform="matrix(-0.71, -0.704, 0.704, -0.71, 2.689, 27.168)"/>
+    <rect id="Rectangle_95" data-name="Rectangle 95" class="cls-7" width="15.666" height="3.785" transform="matrix(-0.919, -0.395, 0.395, -0.919, 29.38, 19.237)"/>
+    <rect id="Rectangle_96" data-name="Rectangle 96" class="cls-7" width="3.785" height="21.701" transform="translate(31.544 18.753) rotate(-138.462)"/>
+  </g>
+  <circle id="Ellipse_31" data-name="Ellipse 31" class="cls-8" cx="5.047" cy="5.047" r="5.047" transform="translate(5.666 24.581)"/>
+  <circle id="Ellipse_32" data-name="Ellipse 32" class="cls-9" cx="5.047" cy="5.047" r="5.047" transform="translate(20.057 10.056)"/>
+  <circle id="Ellipse_33" data-name="Ellipse 33" class="cls-10" cx="5.047" cy="5.047" r="5.047" transform="translate(48.84)"/>
+  <circle id="Ellipse_34" data-name="Ellipse 34" class="cls-5" cx="5.047" cy="5.047" r="5.047" transform="translate(34.449 16.243)"/>
+</svg>
