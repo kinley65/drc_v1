@@ -2,9 +2,9 @@
 
 @section('content')
 <!---------------Navigation ends here --------------------->
-<div class="bd-example"id="main-home-style">
+<div class="bd-example"id="main-home-style-1">
  <div class="main-home">
-   <div class="container">
+   {{-- <div class="container">
      <div class="row">
        <div class="col-lg-6 col-md-12 col-12" id="content-1">
          <h2>Kuzuzangpo!</h2>
@@ -41,19 +41,19 @@
           </div>
           <div class="contentCircle">
               <div class="CirItem title-box active CirItem1">
-                  <h3 class="title"><span>Automate</span></h3>
+                  <h3 class="title"><span>Title Of one</span></h3>
                   <i class="fa fa-clock-o"></i>
               </div>
               <div class="CirItem title-box CirItem2">
-                  <h3 class="title"><span>Chat </span></h3>
+                  <h3 class="title"><span>Title of two </span></h3>
                   <i class="fa fa-comments"></i>
               </div>
               <div class="CirItem title-box CirItem3">
-                  <h3 class="title"><span>Responses</span></h3>
+                  <h3 class="title"><span>Title of three</span></h3>
                   <i class="fa fa-user"></i>
               </div>
               <div class="CirItem title-box CirItem4">
-                  <h3 class="title"><span>Tags</span></h3>
+                  <h3 class="title"><span>Title of three</span></h3>
                   <i class="fa fa-tags"></i>
               </div>
               <div class="CirItem title-box CirItem5">
@@ -69,7 +69,71 @@
   </div>
        </div>
      </div>
-   </div>
+   </div> --}}
+   <section class="hero_areaa hero_height pp-relative d-flex align-items-center" >
+    {{-- <div class="hero_shape">
+        <img src="images/circle-2.png" alt="" class="hero-circle-2">
+        <img src="images/triangle-1.png" alt="" class="hero-triangle-1">
+        <img src="images/triangle-2.png" alt="" class="hero-triangle-2">
+    </div> --}}
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xxl-6 col-xl-6 col-lg-6">
+              <h2>Kuzuzangpo!</h2>
+              <h4 class="mb-2">Welcome to <span>DRC's Site <hr></span></h4>
+              <p> Tell about Department of Revenue and Custom
+               in short words tell about Department of Revenue
+               and Custom in short words.....</p>
+            </div>
+            <div class="col-xxl-6 col-xl-6 col-lg-6">
+                <div class="hero_thumb">
+                    <div class="hero_thumb_wrapper pp-relative">
+                        <img src="Images/Ellipse 35.svg" alt="" class="hero-circle-1 ml-lg-2 ml-0 pl-lg-5 pl-0">
+                        <div class="col-lg-5 hero_thumb_shape shape-1">
+                          <p>Title of the Graphs</p>
+                       </div>
+                        <div class="col-lg-6 col-12 hero_thumb_shape shape-2">
+                           <div class="card bg-white item-card card-block">
+                            <h4 class="card-title text-center"><i class="material-icons">Demo two</i></h4>
+                            <img src="img/icons/pie-chart (1).svg" alt="Photo of sunset">
+                            <h5 class="item-card-title text-center">Your description goes here it is short</h5>
+                           </div>
+                        </div>
+                        <div class="col-lg-4 hero_thumb_shape shape-3">
+                          <div class="card bg-white item-card card-block">
+                            <h4 class="card-title text-center"><i class="material-icons">Demo four</i></h4>
+                            <img src="img/icons/stats.svg" alt="Photo of sunset">
+                            <h5 class="item-card-title text-center">Your description goes here</h5>
+                           </div>
+                        </div>
+                        <div class="col-lg-5 hero_thumb_shape shape-4">
+                          <div class="card bg-white item-card card-block">
+                            <h4 class="card-title text-center"><i class="material-icons">Demo three</i></h4>
+                            <img src="img/icons/pie-chart.svg"class="pr-5" alt="Photo of sunset">
+                            <h5 class="item-card-title text-center">Your description goes here</h5>
+                           </div>
+                           
+                        </div>
+                        <div class="col-lg-7 hero_thumb_shape shape-5">
+                          <div class="card bg-white item-card card-block">
+                            <h4 class="card-title text-center"><i class="material-icons">Demo one</i></h4>
+                            <img src="img/icons/Group 199.svg" alt="Photo of sunset">
+                            <h5 class="item-card-title text-center">Your description goes here  it is short</h5>
+                           </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-12 text-right">
+              <a href='https://www.symptoma.com/en/info/covid-19'>Corona Virus symptoms</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=9308c6112e63bdcb9c1e03c25fc4ffbf7c5e2c65'></script>
+              <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/875913/t/2"></script>
+            </div>
+        </div>
+    </div>
+
+</section>
  </div>
 </div>
 <!---------------Slider ends here --------------------->
@@ -221,7 +285,7 @@
       <div class="">
         <div class="agileits_w3layouts_team_grids row">
           <div class="col-md-3 w3_agileits_services1_grid">
-            <span id="circle"><object data="img/icons/log-in.svg" id="object-services"type=""></object></span>
+            <span id="circle"><img src="img/icons/log-in.svg" id="object-services" alt=""></span>
             <div class="w3_agileits_services1_grid1">
               
               <h3>Register</h3>
@@ -234,7 +298,7 @@
             </div>
           </div>
           <div class="col-md-3 w3_agileits_services1_grid">
-            <span id="circle"><object data="img/icons/log-in.svg" id="object-services"type=""></object></span>
+            <span id="circle"><img src="img/icons/log-in.svg" id="object-services" alt=""></span>
             <div class="w3_agileits_services1_grid1">
               
               <h3>eCMS</h3>
@@ -247,7 +311,7 @@
             </div>
           </div>
           <div class="col-md-3 w3_agileits_services1_grid">
-               <span id="circle"><object data="img/icons/log-in.svg" id="object-services"type=""></object></span>
+               <span id="circle"><img src="img/icons/log-in.svg" id="object-services" alt=""></span>
             <div class="w3_agileits_services1_grid1">
               <h3>BITs</h3>
               <p>this is the description of the BITs page</p>
@@ -259,7 +323,7 @@
             </div>
           </div>
           <div class="col-md-3 w3_agileits_services1_grid">
-               <span id="circle"><object data="img/icons/log-in.svg" id="object-services"type=""></object></span>
+               <span id="circle"><img src="img/icons/log-in.svg" id="object-services" alt=""></span>
             <div class="w3_agileits_services1_grid1">
               <h3>Payment</h3>
               <p>this is the description of the Payment page</p>
@@ -276,33 +340,7 @@
     </div>
 
   </div><!-- Conatiner end -->
-</section><!-- Main container end -->
-<!-- <div class="container my-5 py-5">
-  <div class="row">
-    <div class="co-6 col-md-3 mb-4">
-      <div class="image-hover-outer"> <img src="img/1.jpg" class="img-fluid">
-        <div class="image-hover d-flex align-items-center justify-content-center"> <a href="#" class="btn btn-light">NEWSLETTERS</a> </div>
-      </div>
-    </div>
-    <div class="co-6 col-md-3 mb-4">
-      <div class="image-hover-outer"> <img src="img/2.jpg" class="img-fluid">
-        <div class="image-hover d-flex align-items-center justify-content-center"> <a href="#" class="btn btn-light">MISSION,VISION & VALUES</a> </div>
-      </div>
-    </div>
-    <div class="co-6 col-md-3 mb-4">
-      <div class="image-hover-outer"> <img src="img/3.jpg" class="img-fluid">
-        <div class="image-hover d-flex align-items-center justify-content-center"> <a href="#" class="btn btn-light">REPORT AN ABSENCE</a> </div>
-      </div>
-    </div>
-    <div class="co-6 col-md-3 mb-4">
-      <div class="image-hover-outer"> <img src="img/4.jpg" class="img-fluid">
-        <div class="image-hover d-flex align-items-center justify-content-center"> <a href="#" class="btn btn-light">TERM DATES 2020</a> </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-<!---------------School main info ends here --------------------->
+</section>
 <div class="bg-wrapper-one pb-5">
 <div class="trending-area fix">
   <div class="row text-center">
@@ -346,12 +384,13 @@
                       <div class="trand-right-cap">
                           
                           <h4><a href="details.html">News or event title demos goes here  </a></h4>
-                          <p class="color1"><object class=""data="img/icons/Group 215.svg" type=""></object> 21 Aug 2021</p>                          
+                          <p class="color1"><img src="img/icons/Group 215.svg" alt=""> 21 Aug 2021</p>                          
                       </div>
                       <div class="news-right">
+                        <a href="details.html"> 
                       <div class="icons-arrow">
-                          <object data="img/icons/rightarrow.svg" type=""></object>
-                      </div>
+                        <img src="img/icons/rightarrow.svg" alt="">
+                      </div></a>
                     </div>
                   </div>
                   <div class="trand-right-single d-flex">
@@ -361,11 +400,11 @@
                     <div class="trand-right-cap">
                         
                         <h4><a href="details.html">News or event title demos goes here </a></h4>
-                        <p class="color1"><object class=""data="img/icons/Group 215.svg" type=""></object> 21 Aug 2021</p>                          
+                        <p class="color1"><img src="img/icons/Group 215.svg" alt=""> 21 Aug 2021</p>                          
                     </div>
                     <div class="news-right">
                     <div class="icons-arrow">
-                        <object data="img/icons/rightarrow.svg" type=""></object>
+                      <img src="img/icons/rightarrow.svg" alt="">
                     </div>
                   </div>
                 </div>
@@ -376,11 +415,11 @@
                   <div class="trand-right-cap">
                       
                       <h4><a href="details.html">News or event title demos goes here  </a></h4>
-                      <p class="color1"><object class=""data="img/icons/Group 215.svg" type=""></object> 21 Aug 2021</p>                          
+                      <p class="color1"><img src="img/icons/Group 215.svg" alt=""> 21 Aug 2021</p>                          
                   </div>
                   <div class="news-right">
                   <div class="icons-arrow">
-                      <object data="img/icons/rightarrow.svg" type=""></object>
+                    <img src="img/icons/rightarrow.svg" alt="">
                   </div>
                 </div>
               </div>

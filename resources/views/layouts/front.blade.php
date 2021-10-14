@@ -5,41 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>DRC's</title>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap.min.css">
+{{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> --}}
+<link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.2.0/css/fixedHeader.bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="frontend_css/bootstrap.css">
-<link rel="stylesheet" href="frontend_css/style.css">
+<link rel="stylesheet" href="{{ asset('frontend_css/bootstrap.css') }}">
+<link rel="stylesheet" href="{{ asset('frontend_css/style.css') }}">
+<link rel="stylesheet" href="{{ asset('venobox/css/venobox.css') }}" />	
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="frontend_css/jquery.bxslider.css">
-<link rel="stylesheet" href="frontend_css/flaticon.css">
+<link rel="stylesheet" href="{{ asset('frontend_css/jquery.bxslider.css') }}">
+<link rel="stylesheet" href="{{ asset('frontend_css/flaticon.css') }}">
+<link rel="stylesheet" href="css_animate/animate.min.css">
 <link rel="stylesheet" href="https://cdn.lineicons.com/1.0.1/LineIcons.min.css">
+
 </head>
 <body>
-  <div id="bg-wrapper" style="background: url('img/css_image/Background.jpg');width:100%;max-width:100%;background-position: center;background-size: cover;background-attachment: fixed;">
+  <div id="bg-wrapper" style="background: url('{{ asset('img/css_image/Background.jpg') }}');width:100%;max-width:100%;background-position: center;background-size: cover;background-attachment: fixed;">
   <div id="inside">
-    <div id="feedback">
-      <div id="feedback-form" style='display:none;' class="col-xs-9 col-md-9 panel panel-default">
-       <div class="text-center">
-         <h2 class="mb-4">FEEDBACK</h2>
-       </div>
-        <form method="POST" action="/feedback" class="form panel-body" role="form">
-          <div class="form-group">
-            <input class="form-control" name="name" autofocus placeholder="Your Name" type="text" />
-          </div>
-          <div class="form-group">
-            <input class="form-control" name="email" autofocus placeholder="Your e-mail" type="email" />
-          </div>
-          <div class="form-group">
-            <input class="form-control" name="subject" autofocus placeholder="Subject" type="text" />
-          </div>
-          <div class="form-group">
-            <textarea class="form-control" name="body" required placeholder="Please write your feedback here..." rows="5"></textarea>
-          </div>
-          <button class="btn btn-primary pull-left" type="submit">Send</button>
-        </form>
-      </div>
-      <div id="feedback-tab">Feedback</div>
-    </div>
-    <div class=""id="fixed-top">
+    
+    {{-- <div class=""id="fixed-top"> --}}
 <div class="top-bar">
   <div class="container">
     <div class="row py-3">
@@ -55,12 +40,12 @@
         <path id="Shape-2" data-name="Shape" class="cls-1" d="M33.633,16.226a.593.593,0,0,1-.593-.593,4.452,4.452,0,0,0-4.447-4.447.593.593,0,1,1,0-1.186,5.639,5.639,0,0,1,5.633,5.633A.593.593,0,0,1,33.633,16.226Z" transform="translate(-18.98 -6.16)"/>
         <path id="Shape-3" data-name="Shape" class="cls-1" d="M36.6,9.191A.593.593,0,0,1,36,8.6a7.42,7.42,0,0,0-7.412-7.412.593.593,0,1,1,0-1.186,8.607,8.607,0,0,1,8.6,8.6.593.593,0,0,1-.593.593Z" transform="translate(-18.605)"/>
       </svg> {{ trans('panel.phone_number') }}</a> </div>
-      <div class="col-lg-6 col-md-10 col-sm-10 col-12 top-links d-flex align-items-center justify-content-end"> <a href="{{ url('/notification') }}" class="mr-2">Notification</a> | <a href="{{ url('/whoiswho') }}" class="mr-2 ml-2">{{ trans('panel.who') }}</a> | <a href="{{ url('/contactus') }}" class="mr-2 ml-2">{{ trans('panel.contact') }}</a> | <a href="{{ url('/faqs') }}" class="mr-2 ml-2">{{ trans('panel.faq') }}</a> | <a href="#" class="ml-2"><img src="img/icons/language.svg" alt="language switch"style="margin-top:-5px;">
+      <div class="col-lg-6 col-md-10 col-sm-10 col-12 top-links d-flex align-items-center justify-content-end"> <a href="{{ url('/notification') }}" class="mr-2">Notification</a> | <a href="{{ url('/whoiswho') }}" class="mr-2 ml-2">{{ trans('panel.who') }}</a> | <a href="{{ url('/contactus') }}" class="mr-2 ml-2">{{ trans('panel.contact') }}</a> | <a href="{{ url('/faqs') }}" class="mr-2 ml-2">{{ trans('panel.faq') }}</a> | <a href="#" class="ml-2"><img src="{{ asset('img/icons/language.svg') }}" alt="language switch"style="margin-top:-5px;">
         <div id="dropdown-sec2" >
-          <a onclick="myFunction2()" class="dropbtn2" x-data="{show: false}" @click.away="show = false">&nbsp;{{strtoupper(App::getLocale())}}<img src="img/icons/dropdown.svg" alt="language switch"style="margin-top:5px;"class="ml-1"></a>
+          <a onclick="myFunction2()" class="dropbtn2" x-data="{show: false}" @click.away="show = false">&nbsp;{{strtoupper(App::getLocale())}}<img src="{{ asset('img/icons/dropdown.svg') }}" alt="language switch"style="margin-top:5px;"class="ml-1"></a>
           <div id="myDropdown2" class="dropdown-content2"x-show="show">
-            <a href="#"><span class="mt-2 mr-2"><object data="img/icons/foreign.svg" type=""></object> English</a>
-            <a href="#"><span class="mt-2 mr-2"><object data="img/icons/foreign.svg" type=""></object> Dzongkha</a>
+            <a href="#" class="d-flex"><span class="mr-2"><object data="{{ asset('images/united-states-of-america.svg') }}" type=""></object></span> English</a>
+            <a href="#"class="d-flex"><span class="mr-2"><object data="{{ asset('images/bhutan.svg') }}" type=""></object></span> Dzongkha</a>
           </div>
         </div>
       </div>
@@ -68,7 +53,7 @@
   </div>
 </div>
 
-  <img src="img/Headlines1.svg" alt=""style="max-width:100%;">
+  <img src="{{ asset('img/logo2.jpg') }}" alt=""style="max-width:100%;">
 
 <!---------------Top Bar section ends here --------------------->
 
@@ -78,18 +63,18 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"> <i class="lni-menu"></i> </span> </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav">
-        <li class="nav-item active"> <a class="nav-link" href="{{ url('/') }}"><img src="img/icons/home.svg" alt=""><span class="sr-only">(current)</span></a> </li>
+        <li class="nav-item active"> <a class="nav-link" href="{{ url('/') }}"><img src="{{ asset('img/icons/home.svg') }}" alt=""><span class="sr-only">(current)</span></a> </li>
         <li class="nav-item pt-3 pl-lg-4 pl-0"> <a class="nav-link" href="{{ url('/aboutus') }}"> ABOUT US </a> 
         </li>
-        <li class="nav-item dropdown pt-3"> <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> ANNOUNCEMENT <img src="img/icons/dropdown.svg" alt="language switch"class="ml-1"></a> 
+        <li class="nav-item dropdown pt-3"> <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> ANNOUNCEMENT <img src="{{ asset('img/icons/dropdown.svg') }}" alt="language switch"class="ml-1"></a> 
           <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
           <div class="dropdown-menu dropdown-menu-center animate slideIn" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="{{ url('/vacancy') }}">Vacancy</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="{{ url('/tender') }}">Tender</a>
         </li>
-        <li class="nav-item dropdown pt-3"> <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> PUBLICATION <img src="img/icons/dropdown.svg" alt="language switch"style="margin-top:5px;"class="ml-1"></a> 
+        <li class="nav-item dropdown pt-3"> <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> PUBLICATION <img src="{{ asset('img/icons/dropdown.svg') }}" alt="language switch"style="margin-top:5px;"class="ml-1"></a> 
           <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
-          <div class="dropdown-menu dropdown-menu-center animate slideIn" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="#">Appeals</a>
+          <div class="dropdown-menu dropdown-menu-center animate slideIn" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="{{ url('/publications') }}">Appeals</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Bhutan Trade Statistics</a>
             <div class="dropdown-divider"></div>
@@ -101,35 +86,57 @@
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Manuals</a> </div>
         </li>
-        <li class="nav-item dropdown pt-3"> <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> ACTS & RULES <img src="img/icons/dropdown.svg" alt="language switch"style="margin-top:5px;"class="ml-1"></a> 
+        <li class="nav-item dropdown pt-3"> <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> ACTS & RULES <img src="{{ asset('img/icons/dropdown.svg') }}" alt="language switch"style="margin-top:5px;"class="ml-1"></a> 
           <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
-          <div class="dropdown-menu dropdown-menu-center animate slideIn" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="#">Acts</a>
+          <div class="dropdown-menu dropdown-menu-center animate slideIn" aria-labelledby="navbarDropdown"> <a class="dropdown-item" href="{{ url('/acts') }}">Acts</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Rules</a> </div>
+            <a class="dropdown-item" href="{{ url('/rules') }}">Rules</a> </div>
         </li>
-        <li class="nav-item dropdown pt-3"> <a class="nav-link" href="#" > DOWNLOADS </a> 
+        <li class="nav-item dropdown pt-3"> <a class="nav-link" href="{{ url('/download') }}" > DOWNLOADS </a> 
         </li>
       </ul>
 </div>
         
             <form action="{{ url('/results') }}" method="get"class="d-flex flex-wrap align-items-center justify-content-end" >
                 <div class="search">
-                <input type="text" class="searchTerm" name="search" placeholder="Search DRC's Website">
+                <input type="text" class="searchTerm" name="search" placeholder="Search DRC's Website"value="{{ request()->Query('search') }}">
           <button type="submit" class="searchButton">
-            <object data="img/icons/magnifying-glass.svg"class="object-search mt-1"> </object>
+            <object data="{{ asset('img/icons/magnifying-glass.svg') }}"class="object-search mt-1"> </object>
          </button>
                 </div>
         </form>
  
   </div>
 </nav>
+{{-- </div> --}}
+<div id="feedback">
+  <div id="feedback-form" style='display:none;' class="col-xs-9 col-md-9 panel panel-default">
+   <div class="text-center">
+     <h2 class="mb-4">FEEDBACK</h2>
+   </div>
+    <form method="POST" action="/feedback" class="form panel-body" role="form">
+      <div class="form-group">
+        <input class="form-control" name="name" autofocus placeholder="Your Name" type="text" />
+      </div>
+      <div class="form-group">
+        <input class="form-control" name="email" autofocus placeholder="Your e-mail" type="email" />
+      </div>
+      <div class="form-group">
+        <input class="form-control" name="subject" autofocus placeholder="Subject" type="text" />
+      </div>
+      <div class="form-group">
+        <textarea class="form-control" name="body" required placeholder="Please write your feedback here..." rows="5"></textarea>
+      </div>
+      <button class="btn btn-primary pull-left" type="submit">Send</button>
+    </form>
+  </div>
+  <div id="feedback-tab">Feedback</div>
 </div>
-
 @yield('content')
 
 
 <footer class="ftco-footer ftco-section">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row mb-5" id="border-bottom">
       <!-- <div class="col-md">
         <div class="ftco-footer-widget mb-4">
@@ -141,22 +148,25 @@
         </div>
       </div> -->
       <div class="col-md">
-        <div class="ftco-footer-widget mb-4 ml-md-4">
+        <div class="ftco-footer-widget mb-2 ml-md-4">
           <h2 class="ftco-heading-2">Address</h2>
           <ul class="list-unstyled">
-            <li><a href="#"><span class="mr-2"><object data="img/icons/location (1).svg" type=""></object></span><span class="text"></span> Lower Chubachu, Thimphu, Bhutan</a></li>
-            <li><a href="#"><span class="mt-2 mr-2"><object data="img/icons/fax (1).svg" type=""></object></span>Fax: +975-02-323608</a></li>
-            <li><a href="#"><span class="mt-2 mr-2"><object data="img/icons/old-typical-phone.svg" type=""></object></span>Pabx: +975-02-322319 / 333509</a></li>
+            <li><a href="#"class="d-flex"><span class="mr-2"><object data="img/icons/location (1).svg" type=""></object></span><span class="text"></span> Lower Chubachu, Thimphu, Bhutan</a></li>
+            <li><a href="#"class="d-flex"><span class="mr-2"><object data="img/icons/fax (1).svg" type=""></object></span>Fax: +975-02-323608</a></li>
+            <li><a href="#"class="d-flex"><span class="mr-2"><object data="img/icons/old-typical-phone.svg" type=""></object></span>Pabx: +975-02-322319 / 333509</a></li>
           </ul>
+          <a href="{{ url('/contactus') }}"class="text-white">
+            Show More <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
       <div class="col-md">
         <div class="ftco-footer-widget mb-4 ml-md-4">
           <h2 class="ftco-heading-2">Follow Us</h2>
           <ul class="list-unstyled">
-            <li><a href="#"><span class="mt-2 mr-2"><object data="img/icons/Group 52.svg" type=""></object></span>drcbhutan</a></li>
-            <li><a href="#"><span class="mt-2 mr-2"><object data="img/icons/Group 51.svg" type=""></object></span>#drcbhutan</a></li>
-            <li><a href="#"><span class="mt-2 mr-2"><object data="img/icons/Group 53.svg" type=""></object></span>drcbhutan</a></li>
+            <li><a href="https://www.facebook.com/drcthimphubhutan" class="d-flex"><span class=" mr-0"><object data="img/icons/Group 52.svg" type=""></object></span>@drcthimphubhutan</a></li>
+            <li><a href="https://www.instagram.com/explore/locations/2483616658375263/department-of-revenue-and-customs-thimphu-bhutan/"class="d-flex"><span class="mr-0"><object data="img/icons/Group 51.svg" type=""></object></span>#drcbhutan</a></li>
+            <li><a href="#"class="d-flex"><span class="mr-0"><object data="img/icons/Group 53.svg" type=""></object></span>drcbhutan</a></li>
           </ul>
         </div>
       </div>
@@ -182,24 +192,48 @@
         <div class="ftco-footer-widget mb-4">
           <h2 class="ftco-heading-2">External Links</h2>
           <ul class="list-unstyled">
-            <li><a href="#"><span class="mt-2 mr-2"><object data="img/icons/foreign.svg" type=""></object></span>Ministry of Finance</a></li>
-            <li><a href="#"><span class="mt-2 mr-2"><object data="img/icons/foreign.svg" type=""></object></span>Ministry of Economic Affairs</a></li>
-            <li><a href="#"><span class="mt-2 mr-2"><object data="img/icons/foreign.svg" type=""></object></span>Bhutan Narcotics Control Authority</a></li>
-            <li><a href="#"><span class="mt-2 mr-2"><object data="img/icons/foreign.svg" type=""></object></span>Nation Environment Comission</a></li>
+            <li><a href="https://www.mof.gov.bt/"class="d-flex"><span class="mr-2"><object data="{{ asset('img/icons/foreign.svg') }}" type=""></object></span>Ministry of Finance</a></li>
+            <li><a href="https://www.moea.gov.bt/"class="d-flex"><span class="mr-2"><object data="{{ asset('img/icons/foreign.svg') }}" type=""></object></span>Ministry of Economic Affairs</a></li>
+            <li><a href="https://bnca.gov.bt/"class="d-flex"><span class="mr-2"><object data="{{ asset('img/icons/foreign.svg') }}" type=""></object></span>Bhutan Narcotics Control Authority</a></li>
+            <li><a href="http://www.nec.gov.bt/"class="d-flex"><span class="mr-2"><object data="{{ asset('img/icons/foreign.svg') }}" type=""></object></span>Nation Environment Comission</a></li>
           </ul>
-          <div id="dropdown-sec" >
-            <a onclick="myFunction()" class="dropbtn">See More<img src="img/icons/dropdown.svg" alt="language switch"style="margin-top:5px;"class="ml-1"></a>
+          {{-- <div id="dropdown-sec" >
+            <a onclick="myFunction()" class="dropbtn">See More<img src="{{ asset('img/icons/dropdown.svg') }}" alt="language switch"style="margin-top:5px;"class="ml-1"></a>
             <div id="myDropdown" class="dropdown-content">
-              <a href="#home"><span class="mt-2 mr-2"><object data="img/icons/foreign.svg" type=""></object> Bhutan Chamber of Commerce and industry</a>
-              <a href="#about"><span class="mt-2 mr-2"><object data="img/icons/foreign.svg" type=""></object> Tourism Council of Bhutan</a>
-              <a href="#contact"><span class="mt-2 mr-2"><object data="img/icons/foreign.svg" type=""></object> Royal Monetary Authority</a>
+              <a href="https://www.bcci.org.bt/"><span class="mt-2 mr-2"><object data="{{ asset('img/icons/foreign.svg') }}" type=""></object> Bhutan Chamber of Commerce and industry</a>
+              <a href="https://www.tourism.gov.bt/"><span class="mt-2 mr-2"><object data="{{ asset('img/icons/foreign.svg') }}" type=""></object> Tourism Council of Bhutan</a>
+              <a href="https://www.rma.org.bt/"><span class="mt-2 mr-2"><object data="{{ asset('img/icons/foreign.svg') }}" type=""></object> Royal Monetary Authority</a>
+            </div>
+          </div> --}}
+          <a data-toggle="modal"href="#"class="text-white" data-target="#exampleModalLong">
+            Show More <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+          </a>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">More External Links</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <a href="https://www.bcci.org.bt/"><span class="mt-2 mr-2"><object data="{{ asset('img/icons/foreign2.svg') }}" type=""></object> Bhutan Chamber of Commerce and industry</a>
+                    <a href="https://www.tourism.gov.bt/"><span class="mt-2 mr-2"><object data="{{ asset('img/icons/foreign2.svg') }}" type=""></object> Tourism Council of Bhutan</a>
+                    <a href="https://www.rma.org.bt/"><span class="mt-2 mr-2"><object data="{{ asset('img/icons/foreign2.svg') }}" type=""></object> Royal Monetary Authority</a>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                </div>
+              </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
-      <div class="row">
+      <div class="row" id="footer-bot">
         <div class="col-md-7 text-md-left text-white"> Copyright &copy;<script>document.write(new Date().getFullYear());</script> Department of Revenue & Customs, Ministry of Finance</div>
         <div class="col-md-5 text-md-right text-white"> <a href="#"class="mr-1 ml-1"> Disclaimer </a> | <a href="#"class="mr-1 ml-1"> Sitemap </a> | <a href=""class="mr-1 ml-1"> Terms & Condition </a></div>
     
@@ -212,8 +246,17 @@
 
 <!---------------Copyright section ends here ---------------------> 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script> 
-<script src="frontend_js/bootstrap.js"></script> 
-<script src="frontend_js/jquery.bxslider.min.js"></script> 
+<script src="{{ asset('frontend_js/bootstrap.js') }}"></script> 
+<script src="{{ asset('js/venobox.min.js') }}"></script> 
+
+<script src="{{ asset('frontend_js/jquery.bxslider.min.js') }}"></script> 
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<link rel="stylesheet" href="assets/venobox/css/venobox.css" />	
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/fixedheader/3.2.0/js/dataTables.fixedHeader.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.9/js/responsive.bootstrap.min.js"></script>
 <script>
 $(document).ready(function() {
 	$(".tab_content").hide();
@@ -244,6 +287,27 @@ $(document).ready(function() {
 		$("ul.tabs_one li").removeClass("active");
 		$(this).addClass("active");
 		$(".tabs_one_content").hide();
+		var activeTab = $(this).attr("rel"); 
+		$("#"+activeTab).fadeIn(); 
+	});
+});
+  $(document).ready(function(){
+    $('.slider').bxSlider({	
+	minSlides:1,
+	maxSlides:1,
+    captions:false
+	});
+  });
+</script>
+<script>
+  $(document).ready(function() {
+	$(".whoiswho_content").hide();
+	$(".whoiswho_content:first").show(); 
+
+	$("ul.whoiswho li").click(function() {
+		$("ul.whoiswho li").removeClass("active");
+		$(this).addClass("active");
+		$(".whoiswho_content").hide();
 		var activeTab = $(this).attr("rel"); 
 		$("#"+activeTab).fadeIn(); 
 	});
@@ -394,6 +458,29 @@ $('.itemDot').css({
       }
     }
     </script>
+    <script>
+      $(document).ready(function() {
+    var table = $('#example').DataTable( {
+        responsive: true
+    } );
+ 
+    new $.fn.dataTable.FixedHeader( table );
+} );
+    </script>
+    <script>
+      	$('.venobox').venobox({
+			framewidth: '600px',
+			frameheight: '400px',
+			numeratio: true,
+			titleattr: 'data-title',
+			spinner: 'wandering-cubes',
+			numerationPosition: 'bottom',
+			titlePosition: 'bottom',
+			titleColor: '#f7921a',
+			spinColor: '#fff'
+		});
+    </script>
+        <script src="{{ asset('venobox/js/venobox.min.js') }}"></script>
 </div>
 </div>
 </body>

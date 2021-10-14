@@ -52,7 +52,7 @@
                     </ul>
                 </li>
             @endcan
-            @can('product_management_access')
+            {{-- @can('product_management_access')
                 <li class="nav-item nav-dropdown">
                     <a class="nav-link  nav-dropdown-toggle" href="#">
                         <i class="fa-fw fas fa-shopping-cart nav-icon">
@@ -93,7 +93,7 @@
                         @endcan
                     </ul>
                 </li>
-            @endcan
+            @endcan --}}
            
             <li class="nav-item">
                 <a class="nav-link {{ request()->is('admin/notification') || request()->is('admin/notification/*') ? 'active' : '' }}" href="{{ route("admin.notification.index") }}">

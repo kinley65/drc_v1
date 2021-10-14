@@ -31,7 +31,7 @@
             </div>
             <div class="form-group">
                 <label class="required" for="long_description">{{ trans('cruds.notification.fields.long_description') }}</label>
-                <input class="form-control {{ $errors->has('long_description') ? 'is-invalid' : '' }}" type="text" name="long_description" id="long_description" value="{{ old('long_description', '') }}" required>
+                <textarea id="editor1" cols="30" rows="10"class="form-control {{ $errors->has('long_description') ? 'is-invalid' : '' }}" type="text" name="long_description" value="{{ old('long_description', '') }}"></textarea>
                 @if($errors->has('long_description'))
                     <div class="invalid-feedback">
                         {{ $errors->first('long_description') }}

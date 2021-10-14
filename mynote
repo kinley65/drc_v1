@@ -1,1 +1,19 @@
-base64:peHQF/qtVREhNbLDlFaPg5rC92yyDSja4ivWH5IG+Iw=
+   <div id="notification-bg">
+   <div class="container">
+     
+     <div class="row">
+      @forelse ($notification as $row )
+         <div class="col-lg-4">
+            <h4>{{ $row->title }}</h4>
+            <p>{{ $row->description }}</p>
+           
+        </div>  
+        @empty  
+        <p class="text-center">
+           No request found for search <strong>{{ request()->query('notification-search') }}</strong>  
+       </p> 
+        @endforelse
+        {{ $notification->appends(['notification-search' => request()->query('notification-search')])->links() }} 
+</div>
+   </div>
+   </div>

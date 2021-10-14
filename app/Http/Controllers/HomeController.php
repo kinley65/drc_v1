@@ -38,8 +38,16 @@ class HomeController extends Controller
         }
         return view('frontend.notification',compact('notification'));
     }
+    public function notification_detail($id){
+        return view('frontend.notification_detail')->with([
+            'notification' => Notification::findOrFail($id),
+        ]);
+    }
     public function whoiswho(){
         return view('frontend.whoiswho');
+    }
+    public function gallery(){
+        return view('frontend.gallery');
     }
     public function contactus(){
         return view('frontend.contactus');
@@ -50,11 +58,30 @@ class HomeController extends Controller
     public function aboutus(){
         return view('frontend.about');
     }
+    public function download(){
+        return view('frontend.download');
+    }
     public function vacancy(){
         return view('frontend.vacancy');
     }
     public function tender(){
         return view('frontend.tender');
+
+    }
+    public function acts(){
+        return view('frontend.acts');
+    }
+    public function rules(){
+        return view('frontend.rules');
+        
+    }
+    public function publications(){
+        return view('frontend.publication');
+        
+    }
+    public function news(){
+        return view('frontend.news');
+        
     }
     public function category(ProductCategory $category, ProductCategory $childCategory = null, $childCategory2 = null)
     {

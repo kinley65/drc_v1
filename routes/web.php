@@ -3,13 +3,19 @@
 Route::get('/', 'HomeController@index')->name('index');
 Route::get('/results', 'HomeController@results')->name('results');
 Route::get('/notification', 'HomeController@notification')->name('notification');
+Route::get('notification_detail/{id}','HomeController@notification_detail')->name('notification_detail');
 Route::get('/whoiswho', 'HomeController@whoiswho')->name('whoiswho');
 Route::get('/contactus', 'HomeController@contactus')->name('contactus');
 Route::get('/faqs', 'HomeController@faqs')->name('faqs');
 Route::get('/aboutus', 'HomeController@aboutus')->name('aboutus');
 Route::get('/vacancy', 'HomeController@vacancy')->name('vacancy');
 Route::get('/tender', 'HomeController@tender')->name('tender');
-
+Route::get('/download', 'HomeController@download')->name('download');
+Route::get('/acts', 'HomeController@acts')->name('acts');
+Route::get('/rules', 'HomeController@rules')->name('rules');
+Route::get('/news', 'HomeController@news')->name('news');
+Route::get('/gallery', 'HomeController@gallery')->name('gallery');
+Route::get('/publications', 'HomeController@publications')->name('publications');
 Route::get('/home', function () {
     if (session('status')) {
         return redirect()->route('admin.home')->with('status', session('status'));
